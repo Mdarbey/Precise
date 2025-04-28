@@ -1,0 +1,42 @@
+.card {
+    box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+    margin-bottom: 10px;
+    padding-left:5px;
+    padding-right: 5px;
+    align-content: center;
+    text-align: center;
+}
+.card-img-top{
+    align-self: center;
+    margin:5px;
+    border-radius: 50% !important;
+    width: 200px !important;
+    height: 200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.card-img-top:hover{
+    border: #FBB040;
+
+}
+.card span {
+    text-align: center;
+}
+.card a {
+    color:dimgray
+}
+.card a:hover{
+    color:#FBB040;
+}
+.card p {
+    font-size: 16px;
+}
+h3 {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+.container a {
+    font-size: 18px;
+}

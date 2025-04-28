@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+h1, h2, h3 {
+    font-family: "Inter", Arial, sans-serif;
+}
+h3 {
+    font-weight: 600 !important;
+}
+h6 {
+    font-family: "sen", Arial, Helvetica, sans-serif;
+}
+.nav-top {
+    min-height:48px;
+}
+nav {
+    height:45px;
+    box-shadow: 4px;
+    background-color: white;
+}
+nav li {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #303030;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav li:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    color: black;
+}
+
+nav .navbar-toggler-icon{
+    width: 1.5rem;
+}
+
+header {
+    height: 80px;
+    display: grid;
+    place-content: center;
+    background-image: linear-gradient(270deg, rgba(216, 216, 216, 0) 0%, rgba(255, 255, 255, 0.11) 100%), url(img/banner-temp.jpg);
+    background-position: center;
+    
+    margin-bottom:20px;
+}
+header h1{
+   color: white; 
+}
+
+
+.btn {
+    border: 2px solid #0f4d92 !important;
+    background-color: white;
+    color: #0f4d92 !important;
+    padding: 15px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    border-radius: none;
+    width: 200px;
+  }
+  .btn:hover {
+    border: none;
+    background-color: #0f4d92 !important;
+    color: white !important;
+  }
+  .btn-white {
+    border: 2px solid white !important;
+    background-color: rgba(255, 255, 255, 0);
+    color: white !important;
+    padding: 15px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    border-radius: none;
+    width: 200px;
+  }
+  .btn-white:hover {
+    border: none;
+    background-color: white !important;
+    color: black !important;
+  }
+.background-colour {
+    background-color: rgb(247, 247, 247);
+    padding: 10px;
+}
+.background-colour h3 {
+    text-align: center;
+    padding: 5px;
+}
+.background-colour .center {
+    text-align: center;
+    padding: 30px;
+
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+.footer {
+    background-color: #0f4d92;
+    color: white;
+}
+.footer span i {
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #3DB9F5;
+    
+}
+.footer i:hover {
+    color: #ecba5d;
+}
+.footer a {
+    text-decoration: none; 
+    color: white;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+.footer a:hover {
+    color: #ecba5d;
+}
+.footer p {
+    font-size: 12px;
+}
+.footer img {
+    max-width: 100px;
+    width: 100%;
+}
+.background-colour .card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.vr {
+    padding: 0;
+    margin: 0;
+}
+.navbar-collapse {
+    background-color: white;
+}
+
+
+.img-parent {
+    position: relative;
+    
+}
+.img-parent h2 {
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.alignment {
+    position: absolute;
+    top: 40%;
+    left: 16%;
+}
