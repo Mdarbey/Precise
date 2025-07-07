@@ -157,3 +157,11 @@ p {
     top: 40%;
     left: 16%;
 }
+
+.bi-envelope-fill {
+    color: #505050;
+    transition: 0.3s ease;
+}
+.bi-envelope-fill:hover {
+    color: #252525;
+}

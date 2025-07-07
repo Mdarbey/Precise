@@ -15,15 +15,14 @@
             <div class="container">
                 <div class="row logo">
                     <div class="col-4 logo_center">
-                        <img src="Images/PRECISE Logo blue v2.svg" class="" alt="Precise Logo" width="200px">
+                        <a href="index.html">
+                            <img src="Images/PRECISE Logo blue v2.svg" class="" alt="Precise Logo" width="200px">
+                        </a>
                     </div>
                     <div class="col-5">
 
                     </div>
                     <div class="col-3">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2 mt-1" type="search" placeholder="Search" aria-label="Search">
-                        </form>
                     </div>
                 </div>
             </div>
@@ -51,9 +50,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="news.html">NEWS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="publications.html">PUBLICATIONS</a>
                 </li>
                 </ul>
             </div>
@@ -91,7 +87,140 @@
                 </div>
                 <div class="col-md-6">
                     PRECISE aims to overcome these barriers and better preparing Canada for future pandemics by focusing on :
-                    <img src="Images/Mission_4_steps.jpg" alt="4-step-plan" width="100%">
+                    <div class="container">
+            <div class="d-flex justify-content-center align-items-center gap-3 my-3">
+                <div class="row w-100 g-2 justify-content-center align-items-center">
+                    <div class="col-6 col-sm-3 d-flex justify-content-center mb-2 mb-sm-0">
+                        <a class="accordion-img-btn w-100" data-target="#collapseExample" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                            <img src="Images/Mission_1.jpg" alt="Image 1" class="img-fluid mission-img">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3 d-flex justify-content-center mb-2 mb-sm-0">
+                        <a class="accordion-img-btn w-100" data-target="#collapseExample2" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                            <img src="Images/Mission_2.jpg" alt="Image 2" class="img-fluid mission-img">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3 d-flex justify-content-center">
+                        <a class="accordion-img-btn w-100" data-target="#collapseExample3" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                            <img src="Images/Mission_3.jpg" alt="Image 3" class="img-fluid mission-img">
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3 d-flex justify-content-center">
+                        <a class="accordion-img-btn w-100" data-target="#collapseExample4" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+                            <img src="Images/Mission_4.jpg" alt="Image 4" class="img-fluid mission-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0 bg-transparent">
+                    <div id="collapseExample" class="accordion-collapse collapse show no-anim" data-bs-parent="#accordionExample">
+                        <div class="card card-body">
+                            Pre-approved pathogen-agnostic agreements will enable the use of samples for identification of a large range of emerging pathogens both under peace-time and emergency conditions
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent">
+                    <div id="collapseExample2" class="accordion-collapse collapse no-anim" data-bs-parent="#accordionExample">
+                        <div class="card card-body">
+                            Pre-established sample panels will enable the standardization of assays
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent">
+                    <div id="collapseExample3" class="accordion-collapse collapse no-anim" data-bs-parent="#accordionExample">
+                        <div class="card card-body">
+                            Pre-approved pathogen-agnostic agreements will enable the use of samples for identification of a large range of emerging pathogens both under peace-time and emergency conditions
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent">
+                    <div id="collapseExample4" class="accordion-collapse collapse no-anim" data-bs-parent="#accordionExample">
+                        <div class="card card-body">
+                            Lab-developed and commercial diagnostic tests can be rapidly validated and disseminated across the public health landscape
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                /* Remove collapse animation */
+                .no-anim.collapse:not(.show) {
+                    display: none;
+                }
+                .no-anim.collapse.show {
+                    display: block;
+                    height: auto !important;
+                    transition: none !important;
+                }
+                .no-anim.collapsing {
+                    height: auto !important;
+                    transition: none !important;
+                }
+                /* Responsive mission images */
+                .mission-img {
+                    width: 100%;
+                    max-width: 120px;
+                    height: auto;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    border-radius: 10%;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                }
+                @media (max-width: 575.98px) {
+                    .mission-img {
+                        max-width: 90px;
+                    }
+                }
+                /* Highlight active image button */
+                .accordion-img-btn.active img {
+                    box-shadow: 0 4px 16px rgba(0,123,255,0.3), 0 2px 8px rgba(0,0,0,0.1);
+                    border: 2px solid #0d6efd;
+                }
+            </style>
+            <script>
+            // Custom accordion logic: clicking the open button does nothing, only switches if another is open
+            document.addEventListener('DOMContentLoaded', function() {
+                const btns = document.querySelectorAll('.accordion-img-btn');
+                const sections = [
+                    document.getElementById('collapseExample'),
+                    document.getElementById('collapseExample2'),
+                    document.getElementById('collapseExample3'),
+                    document.getElementById('collapseExample4')
+                ];
+                function getOpenIndex() {
+                    return sections.findIndex(sec => sec.classList.contains('show'));
+                }
+                function setActiveBtn(idx) {
+                    btns.forEach((btn, i) => {
+                        if(i === idx) btn.classList.add('active');
+                        else btn.classList.remove('active');
+                    });
+                }
+                // Set initial active button
+                setActiveBtn(getOpenIndex());
+                btns.forEach((btn, idx) => {
+                    // Change accordion on hover instead of click
+                    btn.addEventListener('mouseenter', function(e) {
+                        const openIdx = getOpenIndex();
+                        if(openIdx === idx) {
+                            // Already open, do nothing
+                            return;
+                        } else {
+                            // Open the hovered section, close others
+                            sections.forEach((sec, i) => {
+                                if(i === idx) {
+                                    sec.classList.add('show');
+                                } else {
+                                    sec.classList.remove('show');
+                                }
+                            });
+                            setActiveBtn(idx);
+                        }
+                    });
+                });
+            });
+            </script>
+        </div>
                 </div>
             </div>
             <hr>
@@ -187,22 +316,52 @@
              <hr>
              
         </div>
-            <div class="background-colour mt-2">
-                <div class="container">
-                    <p>Funding</p>
+            <div class="container my-5">
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4 justify-content-center align-items-center">
+                <div class="col d-flex justify-content-center">
+                    <img src="Images/Canada_Logo.png" alt="Canada Logo" class="img-fluid" style="max-width:200px; height:auto;">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img src="Images/ised.png" alt="Innovation, Science and Economic Development Canada Logo" class="img-fluid" style="max-width:230px; height:auto;">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img src="Images/UofT.png" alt="University of Toronto Logo" class="img-fluid" style="max-width:200px; height:auto;">
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img src="Images/HI3-Logo-RGB-colour-1024x353-1.png" alt="HI3 Logo" class="img-fluid" style="max-width:200px; height:auto;">
                 </div>
             </div>
-        
-        <div class="footer">
+        </div>
+         <div class="footer">
             <div class="container p-4">
                 <div class="row">
                     <div class="col-md-1 col-12">
-                        <img src="Images/PRECISE Logo white v2.svg" alt="Precise Logo No text" style="max-width: 80px; width: 100%;">
+                        <a href="index.html">
+                            <img src="Images/PRECISE Logo white v2.svg" alt="Precise Logo No text">
+                        </a>
                     </div>
                     <div class="vr p-0 d-none d-sm-block"></div>
                     <div class="d-md-none"><hr></div>
-                    <div class="col-4">
-
+                    <div class="col-md-4 col-sm-12">
+                        <div class="container-fluid p-0">
+                            <div class="row g-2 align-items-center">
+                                <div class="col-6 col-sm-4 d-flex justify-content-start justify-content-sm-center">
+                                    <img src="Images/Lunefeld-Tanenbaum.png" alt="Sinai Lunefeld Logo" style="width:100%;">
+                                </div>
+                                <div class="col-6 col-sm-4 d-flex justify-content-start justify-content-sm-center">
+                                    <img src="Images/UHN.png" alt="UHN Logo" style="width:100%;">
+                                </div>
+                                <div class="col-6 col-sm-4 d-flex justify-content-start justify-content-sm-center">
+                                    <img src="Images/sickkids-logo.png" alt="Sick kids logo" style="width:100%;">
+                                </div>
+                                <div class="col-6 col-sm-4 d-flex justify-content-start justify-content-sm-center">
+                                    <img src="Images/sunnybrook.png" alt="Sunnybrook Logo" style="width:100%;">
+                                </div>
+                                <div class="col-6 col-sm-4 d-flex justify-content-start justify-content-sm-center">
+                                    <img src="Images/Unity_Health.png" alt="Unity health toronto logo" style="width:100%;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="vr p-0 d-none d-sm-block"></div>
                     <div class="d-md-none"><hr></div>
@@ -227,19 +386,14 @@
                     </div>
                     <div class="d-md-none"><hr></div>
                     <div class="col-md-1 col-12">
-                      
                     </div>
                     <div class="col-md-1 col-12">
                         <p>
-                            <a href="publications.html">
-                                Publications
-                            </a>
-                            <br>
                             <a href="news.html">
                                 News
                             </a>
                             <br>
-                            <a href="aboutus.html">
+                            <a href="contact.html">
                                 Contact
                             </a>
                             <br>
@@ -253,7 +407,7 @@
                     </div>
                     <div class="vr p-0 d-none d-sm-block"></div>
                     <div class="d-md-none"><hr></div>
-                    <div class="col-2">
+                    <div class="col-md-2 col-sm-12">
                         <p>
                             Connect with us
                         </p>

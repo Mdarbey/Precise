@@ -22,6 +22,9 @@
 
                     </div>
                     <div class="col-3">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2 mt-1" type="search" placeholder="Search" aria-label="Search">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -50,157 +53,125 @@
                 <li class="nav-item">
                     <a class="nav-link" href="news.html">NEWS</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publications.html">PUBLICATIONS</a>
+                </li>
                 </ul>
             </div>
             </div>
         </nav>
 
-        <div class="contianer-fluid img-parent">
-            <img src="Images/banner-temp.jpg" class="heroimg" alt="Cell Painting" width="100%">
-            <div class="alignment">
-                <h2>Preparing Canada for the future</h2>
-                <h2>
-                    <a href="our_mission.html">
-                        <button class="btn-white">
-                            Learn More
-                        </button>
-                    </a>
-                </h2>
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center gap-3 my-3">
+                <a class="accordion-img-btn" data-target="#collapseExample" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                    <img src="Images/Mission_1.jpg" alt="Image 1" style="width:80px; height:80px; object-fit:cover; border-radius:10%; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                </a>
+                <a class="accordion-img-btn" data-target="#collapseExample2" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                    <img src="Images/Mission_2.jpg" alt="Image 2" style="width:80px; height:80px; object-fit:cover; border-radius:10%; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                </a>
+                <a class="accordion-img-btn" data-target="#collapseExample3" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                    <img src="Images/Mission_3.jpg" alt="Image 3" style="width:80px; height:80px; object-fit:cover; border-radius:10%; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                </a>
+                <a class="accordion-img-btn" data-target="#collapseExample4" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+                    <img src="Images/Mission_4.jpg" alt="Image 4" style="width:80px; height:80px; object-fit:cover; border-radius:10%; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                </a>
             </div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0 bg-transparent">
+                    <div id="collapseExample" class="accordion-collapse collapse show no-anim" data-bs-parent="#accordionExample">
+                        <div class="card card-body">
+                            Pre-approved pathogen-agnostic agreements will enable the use of samples for identification of a large range of emerging pathogens both under peace-time and emergency conditions
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent">
+                    <div id="collapseExample2" class="accordion-collapse collapse no-anim" data-bs-parent="#accordionExample">
+                        <div class="card card-body">
+                            Pre-established sample panels will enable the standardization of assays
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent">
+                    <div id="collapseExample3" class="accordion-collapse collapse no-anim" data-bs-parent="#accordionExample">
+                        <div class="card card-body">
+                            Pre-approved pathogen-agnostic agreements will enable the use of samples for identification of a large range of emerging pathogens both under peace-time and emergency conditions
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent">
+                    <div id="collapseExample4" class="accordion-collapse collapse no-anim" data-bs-parent="#accordionExample">
+                        <div class="card card-body">
+                            Lab-developed and commercial diagnostic tests can be rapidly validated and disseminated across the public health landscape
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                /* Remove collapse animation */
+                .no-anim.collapse:not(.show) {
+                    display: none;
+                }
+                .no-anim.collapse.show {
+                    display: block;
+                    height: auto !important;
+                    transition: none !important;
+                }
+                .no-anim.collapsing {
+                    height: auto !important;
+                    transition: none !important;
+                }
+                /* Highlight active image button */
+                .accordion-img-btn.active img {
+                    box-shadow: 0 4px 16px rgba(0,123,255,0.3), 0 2px 8px rgba(0,0,0,0.1);
+                    border: 2px solid #0d6efd;
+                }
+            </style>
+            <script>
+            // Custom accordion logic: clicking the open button does nothing, only switches if another is open
+            document.addEventListener('DOMContentLoaded', function() {
+                const btns = document.querySelectorAll('.accordion-img-btn');
+                const sections = [
+                    document.getElementById('collapseExample'),
+                    document.getElementById('collapseExample2'),
+                    document.getElementById('collapseExample3'),
+                    document.getElementById('collapseExample4')
+                ];
+                function getOpenIndex() {
+                    return sections.findIndex(sec => sec.classList.contains('show'));
+                }
+                function setActiveBtn(idx) {
+                    btns.forEach((btn, i) => {
+                        if(i === idx) btn.classList.add('active');
+                        else btn.classList.remove('active');
+                    });
+                }
+                // Set initial active button
+                setActiveBtn(getOpenIndex());
+                btns.forEach((btn, idx) => {
+                    // Change accordion on hover instead of click
+                    btn.addEventListener('mouseenter', function(e) {
+                        const openIdx = getOpenIndex();
+                        if(openIdx === idx) {
+                            // Already open, do nothing
+                            return;
+                        } else {
+                            // Open the hovered section, close others
+                            sections.forEach((sec, i) => {
+                                if(i === idx) {
+                                    sec.classList.add('show');
+                                } else {
+                                    sec.classList.remove('show');
+                                }
+                            });
+                            setActiveBtn(idx);
+                        }
+                    });
+                });
+            });
+            </script>
         </div>
 
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-6 col-12">
-                    <p>
-                        Welcome to <b>PRECISE</b> -  a pan-Canadian diagnostic Network that has been established to better prepare Canada against emerging 
-                        infectious diseases. 
-                    </p>
-                    <p>
-                        COVID-19 has highlighted critical gaps in the Canadian pandemic preparedness strategy, especially in the biomanufacturing sector, including diagnostics.
-                        Operationally, the lack of a Canadian diagnostic strategy has limited our ability to efficiently detect, track and trace COVID-19 early in the pandemic,
-                        hence hampering our onward response.
-                    </p>
-                    <a href="our_mission.html">
-                        <button class="btn">
-                            Our Mission
-                        </button>
-                    </a>
-                </div>
-                <div class="col-md-6 d-none d-sm-block">
-                    <p>
-                        <b>PRECISE</b> is a collaborative network project with multiple partners. Our partners include:
-                    </p>
-                    <p>
-                        <ul>
-                            <li>
-                                Academic Partners
-                            </li>
-                            <li>
-                                Hospitals
-                            </li>
-                            <li>
-                                Health Research Institutes
-                            </li>
-                            <li>
-                                Public Health Organizations
-                            </li>
-                            <li>
-                                Industry Partners
-                            </li>
-                        </ul>
-                    </p>
-                    <a href="aboutus.html">
-                        <button class="btn">
-                            Our Partners
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="background-colour mt-4">
-            <div class="container">
-                <h3>
-                    Precise has 4 domains
-                </h3>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12 d-flex align-items-stretch">
-                        <div class="card mx-auto shadow-sm" style="width: 18rem;">
-                            <img src="Images/Index_Clinical.jpg" class="card-img-top" alt="temp">
-                            <div class="card-body">
-                              <h5 class="card-title">Clinical Domain</h5>
-                              <p class="card-text">Rapid detection of currently endemic and emerging pathogens/diseases in our communities.</p>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 d-flex align-items-stretch">
-                        <div class="card mx-auto shadow-sm" style="width: 18rem;">
-                            <img src="Images/Index_Pathogen.jpg" class="card-img-top" alt="temp">
-                            <div class="card-body">
-                              <h5 class="card-title">Pathogen & Host Detection Domain</h5>
-                              <p class="card-text"> Identification of novel pathogens and their variants, along with an understanding of the downstream host response in infected individuals.</p>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 d-flex align-items-stretch">
-                        <div class="card mx-auto shadow-sm" style="width: 18rem;">
-                            <img src="Images/Index_Cross_cutting.jpg" class="card-img-top" alt="temp">
-                            <div class="card-body">
-                              <h5 class="card-title">Cross-cutting Diagnostics Domain</h5>
-                              <p class="card-text"> Integration of clinical samples and host-pathogen data to accelerate the development and validation of diagnostic tests and assays.</p>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 d-flex align-items-stretch">
-                        <div class="card mx-auto shadow-sm" style="width: 18rem;">
-                            <img src="Images/Index_Engagement.jpg" class="card-img-top" alt="temp">
-                            <div class="card-body">
-                              <h5 class="card-title">Engagement Domain</h5>
-                              <p class="card-text"> Collaboration among knowledge users, including policymakers, clinicians, scientists, industry, and local communities.</p>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-                <div class="center">
-                    <a href="aboutus.html">
-                        <button class="btn">
-                            About Us
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="news container mt-4">
-            <h3>
-                News
-            </h3>
-            <hr>
-            <div class="news-item">
-                <h4>
-                    Website Launch
-                </h4>
-                <h6>
-                    April 30, 2025
-                </h6>
-                <p>
-                    The precise website is now operational. We plan to further expand our site with more about our partners activities in the near future. Stay tuned!
-                </p>
-            </div>
-            <hr>
-            <div class="news-item">
-                <h4>
-                    Precise Summer Students
-                </h4>
-                <h6>
-                    May 1, 2025
-                </h6>
-                <p>
-                    We are pleased to support 7 summer students, to start their fellowship in Precise laboratories for 2025. We are excited to work with them and wish them the very best summer at some highly regarded labs.
-                </p>
-            </div>
-            <hr>
-        </div>
+        <hr class="mt-4">
 
         <div class="container my-5">
             <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4 justify-content-center align-items-center">
@@ -219,7 +190,8 @@
             </div>
         </div>
 
-        <div class="footer">
+        
+         <div class="footer">
             <div class="container p-4">
                 <div class="row">
                     <div class="col-md-1 col-12">
