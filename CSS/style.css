@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Barriecito&family=Chango&family=DM+Serif+Display:ital@0;1&family=Domine:wght@400..700&family=Megrim&family=Modak&family=Plaster&family=Shrikhand&display=swap');
 
 h1, h2, h3 {
     font-family: "Inter", Arial, sans-serif;
@@ -47,7 +47,6 @@ header {
     place-content: center;
     background-image: linear-gradient(270deg, rgba(216, 216, 216, 0) 0%, rgba(255, 255, 255, 0.11) 100%), url(img/banner-temp.jpg);
     background-position: center;
-    
     margin-bottom:20px;
 }
 header h1{
@@ -159,9 +158,16 @@ p {
 }
 
 .bi-envelope-fill {
-    color: #505050;
+    color: #696969;
     transition: 0.3s ease;
 }
 .bi-envelope-fill:hover {
     color: #252525;
 }
+.serif {
+    font-family: "Domine", serif;
+    font-size: 20px;
+    color: #0f4d92;
+    font-weight: 600;
+}
+
